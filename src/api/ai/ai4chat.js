@@ -17,10 +17,11 @@ module.exports = function(app) {
             const { text } = req.query;
             if (!text) {
                 return res.status(400).json({ status: false, error: 'Text is required' });
-                const { model } = req.query;
+            }
+            const { model } = req.query;
             if (!model) {
                 return res.status(400).json({ status: false, error: 'model is required' });
-            }
+                }
 
             const result = await fetchAi4chat(text);
 
