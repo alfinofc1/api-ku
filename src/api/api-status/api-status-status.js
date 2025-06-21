@@ -123,7 +123,7 @@ module.exports = function (app) {
 
       res.json({
         status: true,
-        creator: 'Hazel',
+        creator: 'alfin',
         result: {
           status: 'Aktif',
           totalrequest: totalRequest.toString(),

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = function(app) {
-    const RAW_URL = 'https://raw.githubusercontent.com/hazelnuttty/API/main/sistem.json';
+    const RAW_URL = 'https://raw.githubusercontent.com/alfinofc1/Sitemapi/refs/heads/main/sistem.json';
 
     function getWaktuSekarang() {
         const now = new Date();
@@ -22,7 +22,7 @@ module.exports = function(app) {
     }
 
     app.get('/generate/createapikey', async (req, res) => {
-        const nama = req.query.name || 'anonymous';
+        const nama = req.query.name || 'alfin';
         const waktu = getWaktuSekarang();
 
         try {
@@ -38,11 +38,11 @@ module.exports = function(app) {
 
             res.json({
                 status: true,
-                creator: 'Hazel',
+                creator: 'alfin',
                 user: nama,
                 "your apikey": selected.apikey,
                 "apikey status": selected.status,
-                "expired api": "No expired",
+                "expired api": "sampai koid web",
                 waktu
             });
         } catch (err) {
