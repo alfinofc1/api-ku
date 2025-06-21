@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = function(app) {
     async function fetchAi4chat(text) {
         try {
-            const model = encodeURIComponent(`1:1,16:9,2:3,3:2,4:5,5:4,9:16,21:9,9:21`);
+            const model = encodeURIComponent(`hai);
             const url = `https://api.nekorinn.my.id/ai-img/ai4chat?text=${encodeURIComponent(text)}&ratio=${encodeURIComponent(model)}`;
             const response = await axios.get(url);
             return response.data;
