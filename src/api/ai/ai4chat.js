@@ -17,6 +17,7 @@ module.exports = function(app) {
             const { text } = req.query;
             if (!text) {
                 return res.status(400).json({ status: false, error: 'Text is required' });
+                }
                 const { ratio } = req.query;
             if (!ratio) {
                 return res.status(400).json({ status: false, error: 'ratio is required' });
