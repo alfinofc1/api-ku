@@ -11,7 +11,7 @@ module.exports = function(app) {
         if (fontsRes.status === 200 && Array.isArray(fontsRes.data.result)) {
           return {
             status: true,
-            creator: "Hazel",
+            creator: "alfin",
             source: "Google Fonts API",
             result: fontsRes.data.result.slice(0, 5)
           };
@@ -28,7 +28,7 @@ module.exports = function(app) {
         if (googleRes.status === 200 && Array.isArray(googleRes.data.result)) {
           return {
             status: true,
-            creator: "Hazel",
+            creator: "alfin",
             source: "Google Search API",
             result: googleRes.data.result.slice(0, 5)
           };
@@ -44,7 +44,7 @@ module.exports = function(app) {
       if (geminiRes.status === 200) {
         return {
           status: true,
-          creator: "Hazel",
+          creator: "alfin",
           source: "Gemini AI",
           result: geminiRes.data.result || geminiRes.data.message
         };
@@ -55,14 +55,14 @@ module.exports = function(app) {
 
     // Step 2: Cek database.json di GitHub
     try {
-      const dbRes = await axios.get('https://raw.githubusercontent.com/hazelnuttty/API/refs/heads/main/database.json');
+      const dbRes = await axios.get('https://raw.githubusercontent.com/alfinnuttty/API/refs/heads/main/database.json');
       const database = dbRes.data;
 
       const matched = database.find(item => item.question?.toLowerCase() === q.toLowerCase());
       if (matched) {
         return {
           status: true,
-          creator: "Hazel",
+          creator: "alfin",
           source: "GitHub Database",
           result: matched.answer
         };
@@ -77,7 +77,7 @@ module.exports = function(app) {
       if (googleRes.status === 200 && Array.isArray(googleRes.data.result)) {
         return {
           status: true,
-          creator: "Hazel",
+          creator: "alfin",
           source: "Google Search API",
           result: googleRes.data.result.slice(0, 5)
         };
@@ -92,7 +92,7 @@ module.exports = function(app) {
       if (fontsRes.status === 200 && Array.isArray(fontsRes.data.result)) {
         return {
           status: true,
-          creator: "Hazel",
+          creator: "alfin",
           source: "Google Fonts API",
           result: fontsRes.data.result.slice(0, 5)
         };
@@ -104,7 +104,7 @@ module.exports = function(app) {
     // Gagal semua
     return {
       status: false,
-      creator: "Hazel",
+      creator: "alfin",
       source: null,
       result: "Maaf, tidak bisa menemukan jawaban untuk pertanyaan tersebut."
     };
@@ -116,7 +116,7 @@ module.exports = function(app) {
       if (!q) {
         return res.status(400).json({
           status: false,
-          creator: "Hazel",
+          creator: "alfin",
           source: null,
           result: 'Parameter "q" diperlukan'
         });
@@ -127,7 +127,7 @@ module.exports = function(app) {
     } catch (error) {
       res.status(500).json({
         status: false,
-        creator: "Hazel",
+        creator: "alfin",
         source: null,
         result: "Maaf, terjadi kesalahan saat memproses permintaan Anda."
       });

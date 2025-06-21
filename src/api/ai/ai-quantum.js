@@ -22,7 +22,7 @@ module.exports = function (app) {
             const response = await axios.get(chosen.url + encodeURIComponent(text), {
                 timeout: 7000,
                 headers: {
-                    'User-Agent': 'QuantumAI/1.0 (Hazelnut)'
+                    'User-Agent': 'QuantumAI/1.0 (alfinnut)'
                 }
             });
 
@@ -58,7 +58,7 @@ module.exports = function (app) {
             if (result.status) {
                 return res.status(200).json({
                     status: true,
-                    creator: "Hazel",
+                    creator: "alfin",
                     source: "Quantum AI",
                     speed_ms: result.speed_ms,
                     result: result.result
@@ -66,7 +66,7 @@ module.exports = function (app) {
             } else {
                 return res.status(500).json({
                     status: false,
-                    creator: "Hazel",
+                    creator: "alfin",
                     source: "Quantum AI",
                     result: result.result
                 });
@@ -74,7 +74,7 @@ module.exports = function (app) {
         } catch (err) {
             return res.status(500).json({
                 status: false,
-                creator: "Hazel",
+                creator: "alfin",
                 source: "Quantum AI",
                 result: 'Terjadi kesalahan tak terduga 😵'
             });
