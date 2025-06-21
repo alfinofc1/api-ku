@@ -14,13 +14,9 @@ module.exports = function(app) {
 
     app.get('/ai/ai4chat', async (req, res) => {
         try {
-            const { text } = req.query;
-            if (!text) {
-                return res.status(400).json({ status: false, error: 'Text is required' });
-                }
-                const { ratio } = req.query;
-            if (!ratio) {
-                return res.status(400).json({ status: false, error: 'ratio is required' });
+            const { text, model } = req.query;
+            if (!text || !model) {
+                return res.status(400).json({ status: false, error: 'Text and Model is required' });
             }
 
             const result = await fetchAi4chat(text);
