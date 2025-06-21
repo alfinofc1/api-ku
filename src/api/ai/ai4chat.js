@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = function(app) {
-    async function fetchCopilotAI(text) {
+    async function fetchAi4chat(text) {
         try {
             const url = `https://api.nekorinn.my.id/ai-img/ai4chat?text=${encodeURIComponent(text)}&ratio=${encodeURIComponent(ratio)}`;
             const response = await axios.get(url);
@@ -23,7 +23,7 @@ module.exports = function(app) {
                 return res.status(400).json({ status: false, error: 'ratio is required' });
             }
 
-            const result = await fetchCopilotAI(text);
+            const result = await fetchAi4chat(text);
 
             res.status(200).json({
                 status: true,
