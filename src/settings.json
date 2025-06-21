@@ -13,6 +13,18 @@
         ]
     },
     "categories": [
+    {
+            "name": "AI IMAGE",
+            "items": [
+                {
+                    "name": "image ai4chat",
+                    "desc": "pembuatan gambar Melalui ai4chat",
+                    "path": "/ai/ai4chat?text=&ratio=",
+                    "status": "READY",
+                    "params": {
+                        "text": "Text for ai4chat to respond to"
+                    }
+                },
         {
             "name": "Artificial Intelligence",
             "items": [
