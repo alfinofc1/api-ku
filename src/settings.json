@@ -12,7 +12,7 @@
             "alfin2"
         ]
     },
-    "categories": [         
+    "categories": [
         {
             "name": "Artificial Intelligence",
             "items": [
@@ -75,6 +75,24 @@
                     "name": "llama-3.3-70b",
                     "desc": "Ai dari llama-3.3-70b yang siap membantu kamu",
                     "path": "/ai/llama-3.3-70b?text=",
+                    "status": "READY",
+                    "params": {
+                        "text": "Teks atau perintah untuk chat AI"
+                    }
+                },
+                {
+                    "name": "qwen-turbo",
+                    "desc": "Ai dari qwen-turbo yang siap membantu kamu",
+                    "path": "/ai/qwen-turbo?text=",
+                    "status": "READY",
+                    "params": {
+                        "text": "Teks atau perintah untuk chat AI"
+                    }
+                },
+                {
+                    "name": "llama-4-scout-17b",
+                    "desc": "Ai dari llama-4-scout-17b yang siap membantu kamu",
+                    "path": "/ai/llama-4-scout-17b?text=",
                     "status": "READY",
                     "params": {
                         "text": "Teks atau perintah untuk chat AI"
